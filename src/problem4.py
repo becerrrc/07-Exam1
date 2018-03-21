@@ -2,7 +2,7 @@
 Exam 1, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
+         their colleagues and Raymond Becerra.  March 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
@@ -138,7 +138,11 @@ def problem4(m):
     # TODO: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    count = 0
+    for k in range(m+1):
+        if m %(k+1)== 0:
+            count = count+(1)
+    return count
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

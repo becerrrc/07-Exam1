@@ -204,11 +204,11 @@ def problem1a(a, b, threshold):
     #     arguments, don't do that.  You are only allowed to use the
     #     1-argument version of the RANGE statement to solve this problem.
     # -------------------------------------------------------------------------
-    #total = 0
+    total = 0
     z = b+1-a
     for k in range(z):
         if product_of_digits(k+a) < threshold:
-            total = k + a
+            total = total + (k+a)
     return total
 
 def run_test_problem1b():
