@@ -98,8 +98,10 @@ def problem3(rect, n, window):
     # -------------------------------------------------------------------------
     rect.attach_to(window)
     for k in range(n):
-        #center = rg.Point()
-        circle = rg.Circle(rect.get_lower_right_corner()),rect.get_height()/2)
+        center = rect.get_lower_right_corner()
+        radius = rect.get_height()/2
+        circle = rg.Circle(center,radius)
+        circle.move_center_to(k*rect.get_upper_right_corner().x,k*rect.get_lower_right_corner().y)
         circle.attach_to(window)
     window.render()
 
