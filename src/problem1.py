@@ -2,14 +2,14 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
+         their colleagues and Raymond Becerra.  March 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_problem1a()
-    run_test_problem1b()
+    #run_test_problem1b()
 
 
 ###############################################################################
@@ -204,7 +204,12 @@ def problem1a(a, b, threshold):
     #     arguments, don't do that.  You are only allowed to use the
     #     1-argument version of the RANGE statement to solve this problem.
     # -------------------------------------------------------------------------
-
+    #total = 0
+    z = b+1-a
+    for k in range(z):
+        if product_of_digits(k+a) < threshold:
+            total = k + a
+    return total
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """

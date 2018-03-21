@@ -2,7 +2,7 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
+         their colleagues and Raymond Becerra.  March 2018.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
@@ -119,8 +119,17 @@ def problem2(line1, line2, thickness, win):
     #          Tests have been written for you (above).
     #   See the IMPORTANT NOTE just above the DEF line above.
     # -------------------------------------------------------------------------
-
-
+    line1.attach_to(win)
+    win.render()
+    line2.attach_to(win)
+    win.render()
+    mid1 = line1.get_midpoint()
+    mid2 = line2.get_midpoint()
+    rect = rg.Rectangle(mid1,mid2)
+    rect.outline_thickness = thickness
+    rect.outline_color = line1.color
+    rect.attach_to(win)
+    win.render()
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
