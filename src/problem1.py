@@ -8,8 +8,8 @@ Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_problem1a()
-    #run_test_problem1b()
+    #run_test_problem1a()
+    run_test_problem1b()
 
 
 ###############################################################################
@@ -223,6 +223,30 @@ def run_test_problem1b():
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    expected = 13100
+    answer = problem1b(15)
+    print()
+    print('Test 1 is: problem1b(15)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    # Test 2:
+    expected = 62373
+    answer = problem1b(24)
+    print()
+    print('Test 2 is: problem1b(24)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    # Test 3:
+    expected = 5707
+    answer = problem1b(12)
+    print()
+    print('Test 3 is: problem1b(12)')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
 
 ###############################################################################
 # IMPORTANT note: in the following problem,
@@ -247,6 +271,12 @@ def problem1b(r):
     # TODO: 5. Implement and test this function.
     #          See the IMPORTANT NOTE just before the DEF above.
     # -------------------------------------------------------------------------
+    total = 0
+    s = (r**2)+1-r
+    for k in range(s):
+        if product_of_digits(k+r) <= r:
+            total = total+(k+r)
+    return total
 
 
 # -----------------------------------------------------------------------------
