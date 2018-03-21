@@ -139,8 +139,8 @@ def problem4(m):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     count = 0
-    for k in range(m):
-        if (m) %(k+1)==0:
+    for k in range(m-1):
+        if (m) %(k+3)==0:
             count = count+(1)
     return count
 
